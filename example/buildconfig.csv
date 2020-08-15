@@ -1,0 +1,3 @@
+compiler,gcc
+files,main.c
+cflags,-o output.bin
