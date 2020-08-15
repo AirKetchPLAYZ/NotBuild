@@ -19,7 +19,7 @@ addonslist = []
 for file in os.listdir("addons"):
     if (not os.path.isfile(os.path.join("addons", file))) or (not file.endswith(".py")):
         continue
-    print("Loading addon: " + file)
+    print("Found addon: " + file)
     addonslist.append(importlib.import_module('addons.' + file.rstrip('.py')))
 os.chdir(olddir)
 print('Addons loaded')

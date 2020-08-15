@@ -4,3 +4,5 @@ rm -r example/building/builder.py
 cp builder.py example/building
 
 python3 -m zipfile -c npc.zip addons builder.py
+mv npc.zip npc
+

@@ -3,6 +3,7 @@
 
 i = input("Project name: ")
 import os
+import stat
 import sys
 import zipfile
 import importlib
@@ -11,6 +12,7 @@ with zipfile.ZipFile(os.path.join(os.path.dirname(__loader__.get_filename()), "n
     os.chdir(i)
     open("buildconfig.csv","w+").close()
     z.extract("builder.py")
+    os.chmod("builder.py", stat.S_IXOTH)
     os.mkdir("building")
     os.rename("builder.py", "building/builder.py")
     with open("addons.txt", "w+") as fi:
