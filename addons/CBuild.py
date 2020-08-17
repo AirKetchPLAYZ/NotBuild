@@ -17,7 +17,6 @@ def pconfig(cfgreader):
 		if row[0].lower() == 'files':
 			for i in row[1:]:
 				files = files + '"' + os.path.abspath(i) + '" '
-	
-	command = compiler + lflags + cflags + files
+	command = compiler + cflags + files + lflags
 	return [command]
 id = "CBuild"
