@@ -13,7 +13,7 @@ def pconfig(cfgreader):
 			for i in row[1:]:
 				cflags = cflags + i + ' '
 		if row[0].lower() == 'addlib':
-			lflags = lflags + '-L' + row[1] + ' '
+			lflags = lflags + '-l' + row[1] + ' '
 		if row[0].lower() == 'files':
 			for i in row[1:]:
 				files = files + '"' + os.path.abspath(i) + '" '
